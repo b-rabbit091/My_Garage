@@ -1,2 +1,2 @@
-# WorkOut-Pro
+# My Garage
 Android Project
