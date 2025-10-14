@@ -1,4 +1,4 @@
-package com.example.workoutprod;
+package com.example.mygarage;
 
 import android.os.Bundle;
 
@@ -13,7 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.workoutprod.databinding.ActivityMainBinding;
+import com.example.mygarage.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;

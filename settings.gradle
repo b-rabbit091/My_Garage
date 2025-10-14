@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WorkOut Prod"
+rootProject.name = "MyGarage"
 include ':app'

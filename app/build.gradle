@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.workoutprod'
+    namespace 'com.example.mygarage'
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.example.workoutprod"
+        applicationId "com.example.mygarage"
         minSdk 24
         targetSdk 36
         versionCode 1
