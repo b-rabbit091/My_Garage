@@ -1,2 +1,4 @@
 # My Garage
-Android Project
+
+**Default username:** user@email.com  
+**Default password:** 1234
