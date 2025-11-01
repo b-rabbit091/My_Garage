@@ -14,7 +14,9 @@
             android:id="@+id/backBtn"
             android:text="← Back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:textColor="#FFFFFF" />
 
         <!-- Title -->
         <TextView
