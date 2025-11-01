@@ -7,11 +7,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Logout Button (Black) -->
     <Button
         android:id="@+id/backBtn"
         android:text="← Logout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:textColor="#FFFFFF"/>
 
     <TextView
         android:text="Dashboard"
@@ -21,31 +24,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <!-- Add / Modify Vehicle Button (Blue) -->
     <Button
         android:id="@+id/addVehicle"
         android:text="Add / Modify Vehicle"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:textColor="#FFFFFF"/>
 
+    <!-- Add Expenses Button (Green) -->
     <Button
         android:id="@+id/addExpense"
         android:text="Add Expenses"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:textColor="#FFFFFF"/>
 
+    <!-- Reminders Button (Red) -->
     <Button
         android:id="@+id/reminders"
         android:text="Reminders"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#F44336"
+        android:textColor="#FFFFFF"/>
 
+    <!-- Vehicle Details Button (Purple) -->
     <Button
         android:id="@+id/vehicleDetails"
         android:text="Vehicle Details"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#9C27B0"
+        android:textColor="#FFFFFF"/>
 </LinearLayout>

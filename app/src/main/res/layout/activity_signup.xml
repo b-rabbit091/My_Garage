@@ -14,7 +14,9 @@
             android:id="@+id/backBtn"
             android:text="← Back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:textColor="#FFFFFF"/>
 
         <TextView
             android:text="Create Account"
@@ -24,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp" />
 
         <EditText
             android:id="@+id/firstName"
@@ -76,6 +78,8 @@
             android:text="Create Account"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 </ScrollView>

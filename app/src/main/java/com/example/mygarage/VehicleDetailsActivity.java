@@ -18,7 +18,11 @@ public class VehicleDetailsActivity extends AppCompatActivity {
         summary = findViewById(R.id.summary);
         backBtn = findViewById(R.id.backBtn);
 
-        summary.setText("Vehicle: Honda Civic\nFuel: $100\nService: $50\nOther: $20\nTotal: $170 (Mock data)");
+        if (MainActivity.currentUserVehicleData != null) {
+            summary.setText(MainActivity.currentUserVehicleData);
+        } else {
+            summary.setText("No vehicle data available. Please log in again.");
+        }
 
         backBtn.setOnClickListener(v -> onBackPressed());
     }
