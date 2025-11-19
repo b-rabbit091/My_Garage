@@ -1,6 +1,6 @@
 # My Garage
 
-**Default username:** user@email.com  
+**Default username:** user@test.com  
 **Default password:** 1234
 
 ## Risky Components:
