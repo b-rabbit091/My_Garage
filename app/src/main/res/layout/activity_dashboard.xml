@@ -1,66 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="24dp"
-    android:background="#E3F2FD"
+    android:background="#F1F5F9"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Logout Button (Black) -->
-    <Button
-        android:id="@+id/backBtn"
-        android:text="← Logout"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
-        android:textColor="#FFFFFF"/>
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:text="Logout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:minWidth="0dp"
+            android:background="@drawable/outline_button_small"
+            android:textColor="#EF4444" />
+
+        <TextView
+            android:id="@+id/txtDashboard"
+            android:text="Welcome"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <TextView
-        android:text="Dashboard"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
+        android:text="Quick Actions"
+        android:textSize="16sp"
+        android:textColor="#6B7280"
+        android:layout_marginTop="12dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
-    <!-- Add / Modify Vehicle Button (Blue) -->
-    <Button
-        android:id="@+id/addVehicle"
-        android:text="Add / Modify Vehicle"
-        android:layout_marginTop="30dp"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#2196F3"
-        android:textColor="#FFFFFF"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:layout_marginTop="24dp"
+        android:useDefaultMargins="true">
 
-    <!-- Add Expenses Button (Green) -->
-    <Button
-        android:id="@+id/addExpense"
-        android:text="Add Expenses"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4CAF50"
-        android:textColor="#FFFFFF"/>
+        <LinearLayout
+            android:id="@+id/addVehicle"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/card_button"
+            android:padding="12dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_vehicle_pic"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="Add / Modify Vehicle"
+                android:textColor="#374151"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-    <!-- Reminders Button (Red) -->
-    <Button
-        android:id="@+id/reminders"
-        android:text="Reminders"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F44336"
-        android:textColor="#FFFFFF"/>
+        <LinearLayout
+            android:id="@+id/addExpense"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/card_button"
+            android:padding="12dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_expense_pic"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="Add Expenses"
+                android:textColor="#374151"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-    <!-- Vehicle Details Button (Purple) -->
-    <Button
-        android:id="@+id/vehicleDetails"
-        android:text="Vehicle Details"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#9C27B0"
-        android:textColor="#FFFFFF"/>
+        <LinearLayout
+            android:id="@+id/reminders"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/card_button"
+            android:padding="12dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_reminder_pic"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="Reminders"
+                android:textColor="#374151"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vehicleDetails"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/card_button"
+            android:padding="12dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_details_pic"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="Vehicle Details"
+                android:textColor="#374151"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reminderList"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/card_button"
+            android:padding="12dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_list_pic"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="Reminder List"
+                android:textColor="#374151"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reports"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/card_button"
+            android:padding="12dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_reports_pic"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="Reports"
+                android:textColor="#374151"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </GridLayout>
+
 </LinearLayout>
