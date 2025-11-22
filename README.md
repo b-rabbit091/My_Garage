@@ -1,7 +1,6 @@
 # My Garage
 
-**Default username:** user@test.com  
-**Default password:** 1234
+For username and password, a user has to register first, create an account then login with correct credentials.
 
 ## Risky Components:
 
