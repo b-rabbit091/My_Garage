@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Vehicle"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Name"
+            android:textSize="13sp"
+            android:textColor="#6B7280" />
+
+        <EditText
+            android:id="@+id/editVehicleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:hint="e.g., Honda Civic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Model"
+            android:textSize="13sp"
+            android:textColor="#6B7280" />
+
+        <EditText
+            android:id="@+id/editModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:hint="e.g., 2018" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Make"
+            android:textSize="13sp"
+            android:textColor="#6B7280" />
+
+        <EditText
+            android:id="@+id/editMake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:hint="e.g., Honda" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Purchase Date"
+            android:textSize="13sp"
+            android:textColor="#6B7280" />
+
+        <EditText
+            android:id="@+id/editPurchaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:hint="MM-DD-YYYY" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Mileage"
+            android:textSize="13sp"
+            android:textColor="#6B7280" />
+
+        <EditText
+            android:id="@+id/editMileage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:inputType="number"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:hint="e.g., 62340" />
+
+    </LinearLayout>
+</ScrollView>

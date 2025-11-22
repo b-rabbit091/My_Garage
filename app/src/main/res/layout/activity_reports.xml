@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F5F9">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:text="Back"
+            android:layout_width="96dp"
+            android:layout_height="40dp"
+            android:background="@drawable/outline_button_small"
+            android:textColor="#111827" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp">
+
+            <ImageView
+                android:id="@+id/headerIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_reports_pic"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/titleReports"
+                android:text="Reports"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/subtitleReports"
+                android:text="Analyze weekly, monthly, and yearly expenses for each vehicle."
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/labelVehicle"
+                android:text="Vehicle"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinnerVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/labelSummaryType"
+                android:text="Summary Type"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinnerSummaryType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardWeekly"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Weekly Summary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2563EB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Last 7 days"
+                android:textSize="12sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/weeklyRange"
+                android:text="-"
+                android:textSize="13sp"
+                android:textColor="#4B5563"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#E5E7EB" />
+
+            <TextView
+                android:text="Total"
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/weeklyTotal"
+                android:text="$0.00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Fuel"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/weeklyFuel"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Washing"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/weeklyWash"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Service"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/weeklyService"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Other"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/weeklyOther"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardMonthly"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Monthly Summary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#7C3AED"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Last 30 days"
+                android:textSize="12sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/monthlyRange"
+                android:text="-"
+                android:textSize="13sp"
+                android:textColor="#4B5563"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#E5E7EB" />
+
+            <TextView
+                android:text="Total"
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/monthlyTotal"
+                android:text="$0.00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Fuel"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/monthlyFuel"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Washing"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/monthlyWash"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Service"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/monthlyService"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Other"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/monthlyOther"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardYearly"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Yearly Summary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#059669"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Last 12 months"
+                android:textSize="12sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/yearlyRange"
+                android:text="-"
+                android:textSize="13sp"
+                android:textColor="#4B5563"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#E5E7EB" />
+
+            <TextView
+                android:text="Total"
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/yearlyTotal"
+                android:text="$0.00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Fuel"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/yearlyFuel"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Washing"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/yearlyWash"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Service"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/yearlyService"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Other"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/yearlyOther"
+                android:text="$0.00"
+                android:textSize="15sp"
+                android:textColor="#111827"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
