@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F1F5F9">
 
     <LinearLayout
         android:orientation="vertical"
@@ -9,67 +10,177 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Back Button (Black) -->
         <Button
             android:id="@+id/backBtn"
-            android:text="← Back"
+            android:text="Back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#000000"
-            android:textColor="#FFFFFF" />
+            android:layout_height="40dp"
+            android:minWidth="0dp"
+            android:background="@drawable/outline_button_small"
+            android:textColor="#111827" />
 
-        <TextView
-            android:text="Add / Modify Vehicle"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/vehicleName"
-            android:hint="Vehicle Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/model"
-            android:hint="Model"
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="16dp">
 
-        <EditText
-            android:id="@+id/make"
-            android:hint="Make"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/headerIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_vehicle_pic"
+                android:scaleType="fitCenter" />
 
-        <EditText
-            android:id="@+id/purchaseDate"
-            android:hint="Purchase Date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/titleAddVehicle"
+                android:text="Add / Modify Vehicle"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/mileage"
-            android:hint="Mileage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/subtitleAddVehicle"
+                android:text="Capture key details for your vehicle so expenses and reminders stay organized."
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-        <!-- Save Vehicle Button (Green) -->
-        <Button
-            android:id="@+id/saveBtn"
-            android:text="Save Vehicle"
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="20dp"
+            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="#4CAF50"
-            android:textColor="#FFFFFF"/>
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Vehicle Name"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/vehicleName"
+                android:hint="e.g., Honda Civic"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:text="Model"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/model"
+                android:hint="e.g., 2018"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:text="Make"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/make"
+                android:hint="e.g., Honda"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:text="Purchase Date"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/purchaseDate"
+                android:hint="MM-DD-YYYY (e.g., 01-10-2023)"
+                android:inputType="date"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:text="Mileage"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/mileage"
+                android:hint="e.g., 62340"
+                android:inputType="number"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:text="Save Vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/primary_button"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Cancel"
+                android:background="@drawable/outline_button_small"
+                android:textColor="#6B7280"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/modifyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Modify Vehicle"
+                android:background="@drawable/outline_button_small"
+                android:textColor="#4F46E5"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
