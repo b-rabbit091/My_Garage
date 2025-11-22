@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MyGarage" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <!-- App theme (single definition only) -->
+    <style name="Theme.MyGarage" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Your overrides if any -->
     </style>
 
-    <style name="Theme.MyGarage" parent="Base.Theme.MyGarage" />
+    <!-- DatePicker purple theme -->
+    <style name="MyDatePickerTheme" parent="Theme.Material3.Light">
+        <item name="colorPrimary">#6A4BCB</item>
+        <item name="colorSecondary">#6A4BCB</item>
+        <item name="colorAccent">#6A4BCB</item>
+        <item name="android:colorAccent">#6A4BCB</item>
+    </style>
+
 </resources>

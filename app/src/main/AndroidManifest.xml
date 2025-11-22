@@ -2,20 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mygarage">
 
-    <!-- Optional permissions if you later add notifications or local storage -->
-    <uses-permission android:name="android.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/mygarage_icon"
         android:label="My Garage"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGarage">
 
-        <!-- Login Activity (Launcher) -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,23 +26,16 @@
             </intent-filter>
         </activity>
 
-        <!-- Signup Activity -->
         <activity android:name=".SignupActivity" />
-
-        <!-- Dashboard Activity -->
         <activity android:name=".DashboardActivity" />
-
-        <!-- Add Vehicle -->
         <activity android:name=".AddVehicleActivity" />
-
-        <!-- Add Expense -->
         <activity android:name=".AddExpenseActivity" />
-
-        <!-- Reminders -->
         <activity android:name=".RemindersActivity" />
-
-        <!-- Vehicle Details -->
         <activity android:name=".VehicleDetailsActivity" />
+        <activity android:name=".ReminderListActivity" />
+        <activity android:name=".ReportsActivity" />
+
+
 
     </application>
 
