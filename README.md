@@ -1,34 +1,187 @@
-# My Garage
+# MyGarage  
+A Vehicle Expense, Maintenance, and Reminder Tracking App
 
-For username and password, a user has to register first, create an account then login with correct credentials.
+---
 
-## Risky Components:
+## 1. Overview
+MyGarage is an Android application designed to help users organize and manage all important information related to their vehicles. Many people forget service dates, lose track of fuel or repair expenses, or misplace receipts. This app solves those problems by providing a simple and structured system where users can store vehicle details, record expenses, set maintenance reminders, and view spending summaries.
 
-Database Management and Performance:
+MyGarage keeps all data stored safely on the device using Room (SQLite), ensuring privacy while offering fast access to information. The app also provides weekly, monthly, and yearly reports, helping users understand their spending patterns and make better decisions about vehicle maintenance.
 
-* As users add multiple vehicles and expense records, managing and retrieving data efficiently becomes important. If not handled properly, large data sets could slow down the app or cause crashes. To avoid this, we will design a well-structured local database and optimize our queries for smooth performance.
+---
 
-Data Storage and Security:
+## 2. Main Features
+- **User Accounts:** Sign up, log in, private local data.
+- **Dashboard:** Quick access to all app functions.
+- **Vehicle Management:** Add/update vehicle name, model, make, purchase date, mileage.
+- **Expense Tracking:** Fuel, washing, servicing, and other expenses (amount + date).
+- **Reminders:** Fuel, washing, and service reminders with date/time and optional notes.
+- **Vehicle Details:** Full overview, expense history, total cost.
+- **Reports:** Weekly, monthly, and yearly summaries.
+- **Notifications:** AlarmManager for reminder alerts.
 
-* The app handles personal and sensitive information such as user credentials (email and password) and vehicle details. Storing this data locally without encryption poses a privacy risk. Unauthorized access or data leaks could occur if the device is compromised. To minimize this risk, the project should implement secure data storage using encrypted SharedPreferences or a local Room database with encryption, and avoid storing plain-text passwords.
+---
 
-Reminder and Notification Reliability:
+## 3. Data Storage
+Room (SQLite) is used to store:
+- User accounts  
+- Vehicles  
+- Expenses  
+- Reminders  
+- Summary data  
+All information remains local to the device.
 
-* The reminder feature depends on Android’s background services for timely notifications. On newer Android versions, background task restrictions or battery optimization settings may prevent notifications from triggering as expected. This could lead to missed reminders for servicing or maintenance. To reduce this risk, the app can use WorkManager or AlarmManager for scheduling tasks and prompt users to allow the necessary permissions for background processes.
+---
 
-•	Uses an outside API
+## 4. Technologies Used
+- Android Studio  
+- Java  
+- XML Layouts  
+- Room (SQLite)  
+- Material Components  
+- AlarmManager  
+- DatePicker & TimePicker  
+- Intents for navigation  
 
-Currently, our project does not use any external API. All the features and data management are handled locally within the application itself. However, in future updates, we plan to enhance the app by integrating useful APIs to provide additional functionality.
-For example, we could use a Fuel Price API to automatically update the latest fuel prices based on the user’s location. This would make expense tracking more accurate and dynamic. Another possible enhancement is integrating the Google Maps API to help users locate nearby fuel stations, service centers, or car washes directly through the app.
+---
 
-•	Requires functionality we will not talk about : 
+## 5. Screenshots
 
-In the current version of our project, we will not be using any advanced or external functionalities that go beyond the topics covered in class. The app will work completely offline, and all the data will be stored locally on the user’s device.
-We will not be using any external APIs or advanced features such as live fuel price updates, real-time map integration, or cloud synchronization. The app also will not connect to any external servers or databases, ensuring that all user information remains private and device-specific
+### Login Screen  
+<img width="366" height="730" alt="Login Screen" src="https://github.com/user-attachments/assets/9b5a559c-8420-49e0-94cf-2abe241d6b18" />
 
-•	Requires functionality we will talk about later (maps, media, data base services, etc.):
 
-Our project includes some features that depend on concepts and functionalities which will be discussed in later parts of the course. For example, the app will eventually need to use a local database service (such as SQLite or Room) to store and manage user data, vehicle details, and expense records efficiently.
-Additionally, in the future, we plan to enhance the app by incorporating Google Maps functionality to help users find nearby fuel stations, service centers, or other vehicle-related locations. There is also potential to include media-related features, such as allowing users to upload photos of receipts or vehicle documents
+### Dashboard  
+<img width="355" height="721" alt="Dashboard" src="https://github.com/user-attachments/assets/f4b6a7ec-f7e1-4865-a780-ba77caba6f8a" />
+
+
+### Add / Modify Vehicle  
+<img width="355" height="730" alt="Add : Modify Vehicle" src="https://github.com/user-attachments/assets/35fdf368-5ee3-4a93-851f-13ff2ac53ede" />
+
+
+### Add Expenses  
+<img width="357" height="737" alt="Add Expenses" src="https://github.com/user-attachments/assets/d2a76114-2144-4c75-9b5a-ae145af04449" />
+
+
+### Set Reminders  
+<img width="343" height="718" alt="Set Reminders" src="https://github.com/user-attachments/assets/24b602a5-9cec-4a07-9bb0-667be684a058" />
+
+
+### Vehicle Details  
+<img width="351" height="730" alt="Vehicle Details" src="https://github.com/user-attachments/assets/f0891d27-f279-4d11-b0a6-93037da1e38e" />
+
+
+### Reminder List  
+<img width="353" height="724" alt="Reminder List" src="https://github.com/user-attachments/assets/322834ac-2b5c-48f8-b768-1d69345a3fd8" />
+
+
+### Reports  
+<img width="357" height="727" alt="Reports" src="https://github.com/user-attachments/assets/866eb08a-d511-48aa-812a-2a2099659167" />
+
+---
+## 6. Build & Run
+### Requirements
+- Android Studio (latest)  
+- Android device or emulator  
+
+### Steps
+
+1. Open in Android Studio  
+2. Wait for Gradle sync  
+3. Run on emulator or device  
+
+---
+
+## 7. Test Accounts for Grading
+
+Instructor
+Email: instructor@mygarage.test
+
+Password: 1234
+
+GA
+Email: ga@mygarage.test
+
+Password: 1234
+
+Demo User 1
+Email: demo1@mygarage.test
+
+Password: 1234
+
+Demo User 2
+Email: demo2@mygarage.test
+
+Password: 1234
+
+
+---
+
+## 8. Completion Status (Based on Project Proposal)
+
+| **Features**                       | **Status**    |
+|-----------------------------------|---------------|
+| User Sign-Up & Login              | Completed     |
+| Dashboard Summary                 | Completed     |
+| Vehicle Management                | Completed     |
+| Expense Tracking & Categorization | Completed     |
+| Reminder Scheduling               | Completed     |
+| Reports (Weekly / Monthly / Yearly) | Completed   |
+| Local Data Storage (Room DB)     | Completed     |
+| UI/UX Enhancements               | Completed     |
+| Full App Navigation               | Completed     |
+| Test User Credentials             | Added         |
+
+---
+
+## 9. Internal Documentation
+
+The codebase includes:
+- Clear variable and method naming  
+- Comments explaining important logic  
+- Organized Activities and database structure  
+- Consistent UI layout files  
+- Readable and maintainable structure  
+
+---
+
+## 10. Problems Faced & Solutions
+
+- **Data transfer between Activities**  
+  Resolved using Intent extras and proper object handling.  
+
+- **Reminder scheduling inconsistencies**  
+  Fixed through correct integration of DatePicker, TimePicker, and AlarmManager.  
+
+- **Layout scaling on different screen sizes**  
+  Solved using ConstraintLayout and responsive design principles.  
+
+- **Expense-to-vehicle mapping issues**  
+  Addressed by assigning unique vehicle IDs in the Room database.  
+
+- **Form input validation errors**  
+  Resolved by adding mandatory field checks.  
+
+---
+
+## 11. Future Improvements
+
+- Cloud data sync and backup  
+- Export reports to PDF or Excel  
+- Upload and store documents (registration, insurance, receipts)  
+- Advanced graphing and analytics  
+
+---
+
+## 12. Team Members
+
+- Jhansi Akshara Sanagala  
+- Chaithanya Reddy Pailla  
+- Charan Reddy Chilipireddy  
+- Anil Panday
+  
+
+---
+
 
 
